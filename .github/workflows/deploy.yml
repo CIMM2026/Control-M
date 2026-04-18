@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy-to-helix:
-    runs-on: ee-crimartine-ee-crimartine_2
+    runs-on: ubuntu-latest
 
     steps:
       # 1. El robot de GitHub descarga tus archivos JSON
