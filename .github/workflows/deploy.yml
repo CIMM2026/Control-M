@@ -1,0 +1,24 @@
+name: Control-M Helix Deployment
+
+# El proceso se dispara cada vez que haces un "push" (subes cambios)
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-to-helix:
+    runs-on: ee-crimartine-ee-crimartine_2
+
+    steps:
+      # 1. El robot de GitHub descarga tus archivos JSON
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+
+      # 4. Configura el entorno y hace el Deploy
+      - name: Deploy Jobs to Helix
+        run: |
+          ctm env add demo "${{ secrets.CTM_URL }}" "${{ secrets.CTM_TOKEN }}"
+          ctm env set demo
+          ctm deploy *.json
