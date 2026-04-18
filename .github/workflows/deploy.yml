@@ -15,6 +15,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # 2. Instala Node.js (necesario para el CLI)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # 3. Instala el CLI de Control-M Automation API
+      - name: Install Control-M CLI
+        run: npm install -g ctm-automation-api
 
       # 4. Configura el entorno y hace el Deploy
       - name: Deploy Jobs to Helix
