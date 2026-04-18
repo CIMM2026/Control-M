@@ -1,7 +1,7 @@
 {
     "Defaults" : {
-        "Application" : "MSR_Sample_2",
-        "SubApplication" : "MSR_Sample_2",
+        "Application" : "MSR_Sample_3",
+        "SubApplication" : "MSR_Sample_3",
         "RunAs" : "Administrator",
         "Host" : "ee-crimartine-ee-crimartine_2",
 
